@@ -1,0 +1,6 @@
+pydantic
+python-dotenv
+Django
+djangorestframework
+django-filter
+psycopg2-binary

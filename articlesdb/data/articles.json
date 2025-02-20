@@ -1,0 +1,38 @@
+[
+    {
+        "model": "api.article",
+        "pk": 1,
+        "fields": {
+            "identifier": "id1",
+            "title": "The Art of Grilling Steak",
+            "abstract": "Master the techniques of grilling the perfect steak",
+            "publication_date": "2024-10-01",  
+            "authors": [2],
+            "tags": [1, 5]
+        }
+    },
+    {
+        "model": "api.article",
+        "pk": 2,
+        "fields": {
+            "identifier": "id2",
+            "title": "Fashion Trends 2024",
+            "abstract": "An overview of the latest fashion trends",
+            "publication_date": "2024-10-05",  
+            "authors": [1, 3],
+            "tags": [2, 6]
+        }
+    },
+    {
+        "model": "api.article",
+        "pk": 3,
+        "fields": {
+            "identifier": "id3",
+            "title": "Breakthroughs in Medicine",
+            "abstract": "Recent advancements in medical research and treatments",
+            "publication_date": "2024-10-10", 
+            "authors": [3, 4],
+            "tags": [3, 7, 9]
+        }
+    }
+]

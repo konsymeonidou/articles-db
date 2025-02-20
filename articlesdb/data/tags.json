@@ -1,0 +1,65 @@
+[
+    {
+        "model": "api.tag",
+        "pk": 1,
+        "fields": {
+            "name": "Cooking"
+        }
+    },
+    {
+        "model": "api.tag",
+        "pk": 2,
+        "fields": {
+            "name": "Fashion"
+        }
+    },
+    {
+        "model": "api.tag",
+        "pk": 3,
+        "fields": {
+            "name": "Beef"
+        }
+    },
+    {
+        "model": "api.tag",
+        "pk": 4,
+        "fields": {
+            "name": "Steak"
+        }
+    },
+    {
+        "model": "api.tag",
+        "pk": 5,
+        "fields": {
+            "name": "Health"
+        }
+    },
+    {
+        "model": "api.tag",
+        "pk": 6,
+        "fields": {
+            "name": "Medicine"
+        }
+    },
+    {
+        "model": "api.tag",
+        "pk": 7,
+        "fields": {
+            "name": "Pills"
+        }
+    },
+    {
+        "model": "api.tag",
+        "pk": 8,
+        "fields": {
+            "name": "Clothes"
+        }
+    },
+    {
+        "model": "api.tag",
+        "pk": 9,
+        "fields": {
+            "name": "Accessories"
+        }
+    }
+]
