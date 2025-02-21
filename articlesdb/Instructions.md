@@ -26,14 +26,14 @@ This is a Django REST framework-based API for managing articles, comments, and t
 
 1. Clone the repository:
 
-    ```bash
+    ```
     git clone <github_repo>
     cd articlesDB
     ```
 
 2. Create and activate a Python virtual environment:
 
-    ```bash
+    ```
     python -m venv venv
     source venv/bin/activate  
     # For Windows use: venv\Scripts\activate
@@ -41,7 +41,7 @@ This is a Django REST framework-based API for managing articles, comments, and t
 
 3. Install the dependencies:
 
-    ```bash
+    ```
     pip install -r requirements.txt
     ```
 
@@ -61,20 +61,20 @@ The others can be created in the admin panel.
 
 #### Remove and reset the sqlite:
 
-    ```bash
+    ```
     rm db.sqlite3
     ```
 
 #### To migrate the data to the database run the command:
 
-    ```bash
+    ```
     python manage.py makemigrations
     python manage.py migrate
     ```
 
 #### Create a superuser:
 
-    ```bash
+    ```
     python manage.py createsuperuser
     ```
 After creating the superuser, login at:
@@ -84,19 +84,19 @@ After creating the superuser, login at:
 
 #### load the tags data using the command:
 
-    ```bash
+    ```
     python manage.py loaddata tags.json  
     ```
 
 #### insert the articles data running this command:
 
-    ```bash
+    ```
     python manage.py loaddata articles.json  
     ```
 
 #### add the comments data with the command:
 
-    ```bash
+    ```
     python manage.py loaddata comments.json  
     ```
 
@@ -108,7 +108,7 @@ After creating the superuser, login at:
 
 1. Start the development server using the command:
 
-    ```bash
+    ```
     python manage.py runserver
     ```
 
