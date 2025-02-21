@@ -62,15 +62,15 @@ The others can be created in the admin panel.
 #### Remove and reset the sqlite:
 
     ```bash
-rm db.sqlite3
-```
+    rm db.sqlite3
+    ```
 
 #### To migrate the data to the database run the command:
 
-```bash
-python manage.py makemigrations
-python manage.py migrate
-```
+    ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+    ```
 
 #### Create a superuser:
 
@@ -84,21 +84,21 @@ After creating the superuser, login at:
 
 #### load the tags data using the command:
 
-```bash
-python manage.py loaddata tags.json  
-```
+    ```bash
+    python manage.py loaddata tags.json  
+    ```
 
 #### insert the articles data running this command:
 
-```bash
-python manage.py loaddata articles.json  
-```
+    ```bash
+    python manage.py loaddata articles.json  
+    ```
 
 #### add the comments data with the command:
 
-```bash
-python manage.py loaddata comments.json  
-```
+    ```bash
+    python manage.py loaddata comments.json  
+    ```
 
 
 
