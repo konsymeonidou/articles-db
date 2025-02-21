@@ -12,8 +12,6 @@ This is a Django REST framework-based API for managing articles, comments, and t
 1. [Project Setup](#project-setup)
 2. [Adding Sample Data](#adding-sample-data)
 3. [Running the API](#running-the-api)
-4. [Filtering](#filtering)
-4. [Export CSV](#export-csv)
 
 ---
 
