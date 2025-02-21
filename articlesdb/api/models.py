@@ -6,18 +6,18 @@ class Article(models.Model):
     publication_date = models.DateField()
     title = models.CharField(max_length=200)
     abstract = models.TextField()
-    authors = models.JSONField(default=list)  # Store authors as a list
-    tags = models.JSONField(default=list)  # Store tags as a list
+    # authors = models.JSONField(default=list)  # Store authors as a list
+    authors = models.ManyToManyField(User)
+    tags = models.JSONField(default=list)
 
     def __str__(self):
         return self.title
 
 class Comment(models.Model):
-    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
     text = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     created_at = models.DateTimeField(auto_now_add=True)
-    # created_by = models.CharField(max_length=100)  # Store the user who created the comment
 
 
     def __str__(self):

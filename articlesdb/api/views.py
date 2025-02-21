@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from .models import Article, Comment, Tag
 from .serializers import ArticleSerializer, CommentSerializer, TagSerializer
+from django.contrib.auth.models import AnonymousUser
 import csv
 from django.http import HttpResponse
 from rest_framework.decorators import action
@@ -13,10 +14,10 @@ class ArticleViewSet(viewsets.ModelViewSet):
     pagination_class = PageNumberPagination 
 
     def perform_create(self, serializer):
-        authors = [self.request.user]  # Add the user who creates the article
-        # authors += serializer.validated_data.get('authors', [])
-        serializer.save(authors=authors)
-        # serializer.save(authors=self.request.user)
+        # authors = [self.request.user]  # Add the user who creates the article
+        # serializer.save(authors=authors)
+        authors = self.request.data.get('authors', [])
+        serializer.save().authors.set(authors) 
 
     def list(self, request, *args, **kwargs):
         request.session['article_filter_params'] = request.GET.urlencode() #  URL-encoded string

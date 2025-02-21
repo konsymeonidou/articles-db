@@ -1,8 +1,9 @@
 from rest_framework import serializers
 from .models import Article, Comment, Tag
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User,AnonymousUser
 
 class ArticleSerializer(serializers.ModelSerializer):
+    authors = serializers.PrimaryKeyRelatedField(many=True, queryset=User.objects.all()) 
     class Meta:
         model = Article
         fields = '__all__'
