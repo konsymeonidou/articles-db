@@ -13,7 +13,6 @@ class ArticleSerializer(serializers.ModelSerializer):
             validated_data['authors'] = []  # Default to an empty list if invalid
         if 'tags' in validated_data and not isinstance(validated_data['tags'], list):
             validated_data['tags'] = []  # Default to an empty list if invalid
-
         # Create the article instance
         return Article.objects.create(**validated_data)
 
