@@ -135,7 +135,8 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',  # Optional
     ],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',  # Require authentication
-        'rest_framework.permissions.IsAdminUser'
+        # 'rest_framework.permissions.IsAuthenticated',  # Require authentication
+        # 'rest_framework.permissions.IsAdminUser'
+        'rest_framework.permissions.AllowAny'
     ],
 }

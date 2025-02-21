@@ -5,7 +5,7 @@
         "fields": {
             "article": 1,
             "text": "This grilling guide is amazing!",
-            "user": "1",
+            "user": 1,
             "created_at": "2024-10-01T14:30:00Z"
         }
     },
@@ -15,7 +15,7 @@
         "fields": {
             "article": 1,
             "text": "Can't wait to try these steak techniques!",
-            "user": "1",
+            "user": 1,
             "created_at": "2024-10-01T14:30:00Z"
         }
     },
@@ -25,7 +25,7 @@
         "fields": {
             "article": 2,
             "text": "Loving these fashion trends!",
-            "user": "1",
+            "user": 1,
             "created_at": "2024-10-01T14:30:00Z"
         }
     },
@@ -35,7 +35,7 @@
         "fields": {
             "article": 3,
             "text": "Medical advancements are fascinating!",
-            "user": "1",
+            "user": 1,
             "created_at": "2024-10-01T14:30:00Z"
         }
     },
@@ -45,7 +45,7 @@
         "fields": {
             "article": 3,
             "text": "Exciting future for healthcare!",
-            "user": "1",
+            "user": 1,
             "created_at": "2024-10-01T14:30:00Z"
         }
     }
