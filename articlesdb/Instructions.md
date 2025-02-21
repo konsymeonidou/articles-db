@@ -61,22 +61,22 @@ The others can be created in the admin panel.
 
 #### Remove and reset the sqlite:
 
-    ```
+    
     rm db.sqlite3
-    ```
+    
 
 #### To migrate the data to the database run the command:
 
-    ```
+    
     python manage.py makemigrations
     python manage.py migrate
-    ```
+    
 
 #### Create a superuser:
 
-    ```
+    
     python manage.py createsuperuser
-    ```
+    
 After creating the superuser, login at:
     ```
     http://127.0.0.1:8000/admin/login/?next=/admin/login``` to be able to perform actions to the api. 
@@ -84,21 +84,21 @@ After creating the superuser, login at:
 
 #### load the tags data using the command:
 
-    ```
+    
     python manage.py loaddata tags.json  
-    ```
+    
 
 #### insert the articles data running this command:
 
-    ```
+    
     python manage.py loaddata articles.json  
-    ```
+    
 
 #### add the comments data with the command:
 
-    ```
+    
     python manage.py loaddata comments.json  
-    ```
+
 
 
 
