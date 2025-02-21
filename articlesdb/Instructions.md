@@ -112,11 +112,15 @@ After creating the superuser, login at:
     python manage.py runserver
     ```
 
-http://127.0.0.1:8000/admin/auth/user/
+2. Login to perform actions for the api(add users, change data)
+    
+    ```
+    http://127.0.0.1:8000/admin/auth/user/
+    ```
 
-2. The API will be available at `http://127.0.0.1:8000/`.
+3. The API will be available at `http://127.0.0.1:8000/`.
 
-34. The following endpoints are available:
+4. The following endpoints are available:
    - `/api/articles/` – View, create, and manage articles.
    - `/api/tags/` – Manage tags.
    - `/api/comments/` – Manage comments.
