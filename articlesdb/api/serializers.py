@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from .models import Article, Comment, Tag, Author
-from django.contrib.auth.models import User,AnonymousUser
 
 
 class CommentSerializer(serializers.ModelSerializer):
