@@ -8,7 +8,7 @@
             "abstract": "Master the techniques of grilling the perfect steak",
             "publication_date": "2024-10-01",  
             "authors": [2],
-            "tags": ["Cooking"]
+            "tags": [1]
         }
     },
     {
@@ -20,7 +20,7 @@
             "abstract": "An overview of the latest fashion trends",
             "publication_date": "2024-10-05",  
             "authors": [1, 2],
-            "tags": ["Fashion"]
+            "tags": [2]
         }
     },
     {
@@ -32,7 +32,7 @@
             "abstract": "Recent advancements in medical research and treatments",
             "publication_date": "2024-10-10", 
             "authors": [2],
-            "tags": ["Medicine"]
+            "tags": [3]
         }
     }
 ]
