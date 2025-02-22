@@ -63,6 +63,8 @@ The others can be created in the admin panel.
 
     
     rm db.sqlite3
+
+**Note**: If something is not working try to remove, also, the migration files. 
     
 
 #### To migrate the data to the database run the command:
@@ -79,13 +81,23 @@ The others can be created in the admin panel.
     
 After creating the superuser, login at:
     ```
-    http://127.0.0.1:8000/admin/login/?next=/admin/login``` to be able to perform actions to the api. 
+    http://127.0.0.1:8000/admin/login/?next=/admin/login``` to be able to perform actions to the api.
+    Create a user in order to be authenticated.
+
+### Note:
+    In order for the Django fixtures to work correctly, you must have users already created.. The first is already created through the ```python manage.py createsuperuser``` command. The others can be created in the admin panel.
     
 
 #### load the tags data using the command:
 
     
     python manage.py loaddata tags.json  
+
+
+#### load the authors data using the command:
+
+    
+    python manage.py loaddata authors.json  
     
 
 #### insert the articles data running this command:
@@ -98,6 +110,10 @@ After creating the superuser, login at:
 
     
     python manage.py loaddata comments.json  
+
+**Note**: Additional way to add data:
+        1. Via Django Admin Panel (connect with admin credentials)
+        2. Via Django shell
 
 
 
@@ -127,3 +143,15 @@ After creating the superuser, login at:
    - `/api/articles/export_csv/` – Export articles as a CSV file.
 
 ---
+
+    Example for article POST method:
+    ```
+    {
+    "identifier": "a111",
+    "publication_date": "2023-10-02",
+    "authors": [{"name": "Alice Johnson"}],
+    "abstract": "test",
+    "title": "test",
+    "tags":[{"name": "wwww"}]
+    }
+    ```
