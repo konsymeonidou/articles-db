@@ -1,28 +1,25 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, filters
 from .models import Article, Comment, Tag
 from .serializers import ArticleSerializer, CommentSerializer, TagSerializer
-from django.contrib.auth.models import AnonymousUser
 import csv
 from django.http import HttpResponse
 from rest_framework.decorators import action
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.pagination import PageNumberPagination
+from django_filters.rest_framework import DjangoFilterBackend
 
 class ArticleViewSet(viewsets.ModelViewSet):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
     pagination_class = PageNumberPagination 
 
-    def perform_create(self, serializer):
-        # authors = [self.request.user]  # Add the user who creates the article
-        # serializer.save(authors=authors)
-        authors = self.request.data.get('authors', [])
-        serializer.save().authors.set(authors) 
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    filterset_fields = {
+        'publication_date': ['year', 'month'],
+        'authors__name': ['exact'],
+        'tags__name': ['exact'],
+    }
+    search_fields = ['title', 'abstract']
 
-    def list(self, request, *args, **kwargs):
-        request.session['article_filter_params'] = request.GET.urlencode() #  URL-encoded string
-        print(request.session['article_filter_params'])
-        return super().list(request, *args, **kwargs)
 
     @action(detail=False, methods=['get'])
     def export_csv(self, request):
@@ -41,7 +38,6 @@ class ArticleViewSet(viewsets.ModelViewSet):
 class CommentViewSet(viewsets.ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
@@ -50,7 +46,6 @@ class CommentViewSet(viewsets.ModelViewSet):
 class TagViewSet(viewsets.ModelViewSet):
     queryset = Tag.objects.all()
     serializer_class = TagSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def perform_create(self, serializer):
         serializer.save()
