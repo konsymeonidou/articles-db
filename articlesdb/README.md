@@ -54,8 +54,8 @@ You can load predefined sample data using Django fixtures.
 
 **Importart**: the fixtures must be inserted in order
 
-### Prerequisite: 
-In order for the fixtures (which are static data) to work correctly, you must have 3 users already created and given the superuser and staff status. 
+### Prerequisites: 
+In order for the fixtures (which are static data) to work correctly, you must have users already created and given the superuser and staff status. 
 The first user is created through the ```python manage.py createsuperuser``` command. 
 The others can be created in the admin panel. 
 
@@ -64,7 +64,7 @@ The others can be created in the admin panel.
     
     rm db.sqlite3
 
-**Note**: If something is not working try to remove, also, the migration files. 
+**Note**: If something is not working, try to remove, also, the migration files. 
     
 
 #### To migrate the data to the database run the command:
@@ -84,9 +84,6 @@ After creating the superuser, login at:
     http://127.0.0.1:8000/admin/login/?next=/admin/login``` to be able to perform actions to the api.
     Create a user in order to be authenticated.
 
-### Note:
-    In order for the Django fixtures to work correctly, you must have users already created.. The first is already created through the ```python manage.py createsuperuser``` command. The others can be created in the admin panel.
-    
 
 #### load the tags data using the command:
 
@@ -145,7 +142,7 @@ After creating the superuser, login at:
 ---
 
     Example for article POST method:
-    ```
+    
     {
     "identifier": "a111",
     "publication_date": "2023-10-02",
@@ -154,4 +151,4 @@ After creating the superuser, login at:
     "title": "test",
     "tags":[{"name": "wwww"}]
     }
-    ```
+
