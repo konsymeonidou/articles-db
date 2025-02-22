@@ -1,0 +1,16 @@
+[
+    {
+        "model": "api.author",
+        "pk": 1,
+        "fields": {
+            "name": "John Doe"
+        }
+    },
+    {
+        "model": "api.author",
+        "pk": 2,
+        "fields": {
+            "name": "Jane Smith"
+        }
+    }
+]

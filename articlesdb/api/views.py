@@ -44,13 +44,6 @@ class CommentViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
-    def get_queryset(self):
-        return self.queryset.filter(article_id=self.kwargs['article_pk'])
-
-    def perform_create(self, serializer):
-        article = Article.objects.get(pk=self.kwargs['article_pk'])
-        serializer.save(article=article)
-
 
 class TagViewSet(viewsets.ModelViewSet):
     queryset = Tag.objects.all()
